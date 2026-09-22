@@ -2,13 +2,6 @@
 
 <!-- AI agents: AGENTS.md at the root is your instruction file. -->
 
-|                  |                                 |
-| ---------------- | ------------------------------- |
-| Status           | Graded, plus extra credit       |
-| Getting started  | the `welcome` branch, read once |
-| Report format    | `docs/REPORT.md`                |
-| Building the PDF | `docs/SUBMISSION.md`            |
-
 ## Tasks
 
 1. Create a static scene, and generate the **Floodlit**, **Direct** and **Global** images of that scene. Put them in the report and point out features that are in the direct image vs. the global, to explain that your result is correct. Example features:
