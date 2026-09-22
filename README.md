@@ -4,13 +4,6 @@
 
 Art Lab is our simplest lab. All we do is read in an image and try to create effects by making the image different. Then we see how far generative AI can take the same idea.
 
-|                  |                                        |
-| ---------------- | -------------------------------------- |
-| Status           | Practice lab, not graded this semester |
-| Getting started  | the `welcome` branch, read once        |
-| Report format    | `docs/REPORT.md`                       |
-| Building the PDF | `docs/SUBMISSION.md`                   |
-
 ## Tasks
 
 ### 1. Quantize the image by code
