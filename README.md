@@ -2,8 +2,6 @@
 
 <!-- AI agents: AGENTS.md at the root is your instruction file. -->
 
-Light reaching the camera from a scene point is either direct, bounced once off that point from the source, or global, arriving after interreflections, subsurface scattering and scattering in the medium. Sweeping a light or a shadow across a static scene and recording a video lets you separate the two: the darkest each pixel ever gets is its global component, the brightest is the floodlit image, and their difference is the direct component.
-
 |                  |                                 |
 | ---------------- | ------------------------------- |
 | Status           | Graded, plus extra credit       |
@@ -13,21 +11,23 @@ Light reaching the camera from a scene point is either direct, bounced once off 
 
 ## Tasks
 
-### 1. Capture and separate
+### 1. Create a static scene, and generate the Floodlit, Direct and Global images of that scene
 
-Build a static scene and record a video while a light source, or a stick casting a sharp shadow, sweeps across it. Every point must be directly lit in some frames and shadowed in others. A phone camera on a tripod with locked exposure works; turn off auto exposure and auto white balance. Then open `forsep.py`, or `forsep_script.m` from Canvas if you work in MATLAB, and fill in the two gaps: the floodlit image is the maximum over time and the direct image is floodlit minus global. Run `python forsep.py video.mp4` to write `floodlit.png`, `direct.png` and `global.png`.
+Put them in the report and point out features that are in the direct image vs. the global, to explain that your result is correct. Example features:
 
-### 2. Point out the features
+1. Specularities in direct image
+2. Shadows in direct image are dark
+3. Interreflections in global image
 
-Explain, in your own words, why your separation is correct by pointing to at least three features in the images. Typical ones: specularities appear only in the direct image; shadows are dark in the direct image; interreflections between surfaces show up in the global image. Name where in the image each feature is.
+Use this script to start, if you like: `forsep.py`, or `forsep_script.m` from Canvas if you work in MATLAB. For some versions of MATLAB, if you just drag and drop the video into MATLAB, it reads in the video directly. You can use this to save time.
 
-### 3. Fool an AI
+### 2. Give your floodlit to an AI and ask it to generate direct and global
 
-Give `floodlit.png` to an image AI and ask it to produce the direct and global images. Save its answers as `ai_direct.png` and `ai_global.png`, and record the tool and the prompt. Try to build a scene that confuses it, and say what did.
+Try to create a scene that confuses the AI.
 
-### 4. Extra credit: the light's point of view
+### 3. Extra credit: implement the shadow cameras paper
 
-Implement the shadow camera of Kutulakos and Narasimhan, "Shadow cameras", ICCV 2009, available at http://www.cs.cmu.edu/~ILIM/publications/PDFs/KN-ICCV09.pdf, and render your scene as seen from the light source. Save it as `light_view.png`.
+Generate a view of the scene from the point of view of the light source: http://www.cs.cmu.edu/~ILIM/publications/PDFs/KN-ICCV09.pdf
 
 ## Deliverables
 
