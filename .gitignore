@@ -26,6 +26,12 @@ __pycache__/
 *.pdf
 /report.docx
 
+# Captured video and raw data stay local; only result images are committed
+*.mp4
+*.mov
+*.avi
+*.mkv
+
 # OS
 .DS_Store
 Thumbs.db
