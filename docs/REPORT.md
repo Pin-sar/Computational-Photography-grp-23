@@ -1,8 +1,6 @@
 # Writing the report
 
-`report.typ` at the repository root is the report. Its top-level headings
-are the required sections, in order. Red underlined text is a placeholder.
-Build with
+`report.typ` at the repository root is the report. Its top-level headings are the required sections, in order. Red underlined text is a placeholder. Build with
 
 ```sh
 typst compile report.typ GroupXX.pdf      # XX is your two-digit group number
@@ -10,8 +8,7 @@ typst compile report.typ GroupXX.pdf      # XX is your two-digit group number
 
 ## Placeholders
 
-`#todo[...]` renders red and underlined. A bare `#todo[]` prints TODO. The
-submission procedure checks that no red text remains.
+`#todo[...]` renders red and underlined. A bare `#todo[]` prints TODO. The submission procedure checks that no red text remains.
 
 ## Title block
 
@@ -28,9 +25,7 @@ submission procedure checks that no red text remains.
 )
 ```
 
-`authors` is your group's roster, filled once during onboarding and shared
-through the repository. Every other file takes the roster from here. Names
-become mailto links on the title page.
+`authors` is your group's roster, filled once during onboarding and shared through the repository. Every other file takes the roster from here. Names become mailto links on the title page.
 
 ## Image panels
 
@@ -41,22 +36,15 @@ become mailto links on the title page.
 ))
 ```
 
-Each entry is a file name relative to the repository root and a label.
-`none` shows IMAGE PENDING in red until replaced. Labels sit in a shaded
-row under the images. A label that is itself a placeholder, such as
-`todo[Name of AI used]`, becomes the real name. Optional arguments:
-`height`, `stroke`, `inset`, `label-fill`.
+Each entry is a file name relative to the repository root and a label. `none` shows IMAGE PENDING in red until replaced. Labels sit in a shaded row under the images. A label that is itself a placeholder, such as `todo[Name of AI used]`, becomes the real name. Optional arguments: `height`, `stroke`, `inset`, `label-fill`.
 
 ## Manual sections
 
-`// manual` on the line above a heading means a student writes that section
-in their own words. Agents insert the text verbatim or leave
-`#todo[To be written by the student.]`.
+`// manual` on the line above a heading means a student writes that section in their own words. Agents insert the text verbatim or leave `#todo[To be written by the student.]`.
 
 ## AI disclosure
 
-The last section holds one bullet per member, in roster order, one blank
-line between bullets:
+The last section holds one bullet per member, in roster order, one blank line between bullets:
 
 ```typst
 = AI disclosure
@@ -68,14 +56,8 @@ line between bullets:
   from my notes.
 ```
 
-It is a living record. After every piece of work your agent rewrites your
-own bullet and pushes. Edit only your own bullet and keep the blank line;
-it is what lets git merge two members' edits. Each bullet names tools and
-models, code they wrote or ran, figures they produced, text they drafted,
-and the parts done without AI. At submission the whole group confirms the
-section.
+It is a living record. After every piece of work your agent rewrites your own bullet and pushes. Edit only your own bullet and keep the blank line; it is what lets git merge two members' edits. Each bullet names tools and models, code they wrote or ran, figures they produced, text they drafted, and the parts done without AI. At submission the whole group confirms the section.
 
 ## Plain markup only
 
-Headings, bullet lists, tables and figures. No new functions, and no
-imports beyond `submission`, `panels` and `todo`.
+Headings, bullet lists, tables and figures. No new functions, and no imports beyond `submission`, `panels` and `todo`.

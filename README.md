@@ -1,66 +1,30 @@
-# Computational Photography labs
+# Computational Photography Labs
 
-This is a template repository to kick-start the in-class labs: it gives
-your group a private workspace, an AI agent that knows the course rules,
-and a report that builds itself. Using it is elective. Every Canvas
-assignment page also carries the lab handout, a Word report template and,
-where there is starter code, a MATLAB version, so a group can do any lab
-the conventional way and hand in the same PDF.
+This is a template repository to kick-start in-class labs: it gives your group a private workspace, an AI agent that knows the course rules, and a report that builds itself.
 
-Each lab is a branch, `Lab0`, `Lab1`, and so on, and its `README.md` is the
-lab. This branch holds the setup and the files shared by every lab. Your
-work lives in a private repository of your group, never in a fork.
+Use of this repo is elective. Every Canvas assignment page also carries the lab handout, a Word report template and, where there is starter code, a MATLAB version, so your group can do any lab the conventional way and hand in the same PDF.
 
 ## Agentic setup
 
 > [!CAUTION]
-> The rest of this section is written for an agentic AI, not for you.
-> Paste the starter prompt from the Canvas announcement into your agent and
-> it will fetch this page and follow these steps. Prefer to do it yourself?
-> Skip to Manual setup.
+> This section is written for **AI agents**. If you are a human, stop here and point your AI to this page. You may follow [manual setup](#manual-setup) instructions if you prefer to setup yourself.
 
-Agent: work through these steps in order. Ask only what a step tells you to
-ask, and never fork the course repository or make anything public.
+Agent: work through these steps in order. Ask only what a step tells you to ask, and never fork the course repository or make anything public.
 
-1. **Ask how the student wants to collaborate.** One message, three
-   options: solo; first in my group, I will host the group repository; or
-   joining my group's repository, in which case ask for its URL. Read the
-   choice back and get an explicit yes before running any command.
+1. **Ask how the student wants to collaborate.** One message, three options: solo; first in my group, I will host the group repository; or joining my group's repository, in which case ask for its URL. Read the choice back and get an explicit yes before running any command.
 
 2. **Clone.**
-   - Solo or hosting:
-     `git clone https://github.com/uf-focus-lab/Computational-Photography.git`,
-     enter it, `git remote rename origin upstream`. Then create their
-     private repository. With `gh`:
-     `gh repo create comp-photo-labs --private --source=. --remote=origin --push`.
-     Without it, ask them to create an empty private repository on
-     github.com and paste its URL, then `git remote add origin <url>` and
-     `git push -u origin welcome`. If hosting, tell them to add each
-     teammate under the repository's Settings, Collaborators, and to send
-     teammates the URL.
-   - Joining: `git clone <url>`, enter it, then
-     `git remote add upstream https://github.com/uf-focus-lab/Computational-Photography.git`.
-   - Confirm with `git remote -v` that `origin` is private and `upstream`
-     is the course repository. Never push to `upstream`.
+   - Solo or hosting: `git clone https://github.com/uf-focus-lab/Computational-Photography.git`, enter it, `git remote rename origin upstream`. Then create their private repository. With `gh`: `gh repo create comp-photo-labs --private --source=. --remote=origin --push`. Without it, ask them to create an empty private repository on github.com and paste its URL, then `git remote add origin <url>` and `git push -u origin welcome`. If hosting, tell them to add each teammate under the repository's Settings, Collaborators, and to send teammates the URL.
+   - Joining: `git clone <url>`, enter it, then `git remote add upstream https://github.com/uf-focus-lab/Computational-Photography.git`.
+   - Confirm with `git remote -v` that `origin` is private and `upstream` is the course repository. Never push to `upstream`.
 
-3. **Environment.** `python3 --version` must be 3.10 or newer and
-   `typst --version` 0.12 or newer. If typst is missing, offer to install it
-   with `brew install typst`, `winget install Typst.Typst`, or
-   `cargo install typst-cli`, and ask before installing. Then
-   `python3 -m venv .venv` and install `requirements.txt` with the venv's
-   pip.
+3. **Environment.** `python3 --version` must be 3.10 or newer and `typst --version` 0.12 or newer. If typst is missing, offer to install it with `brew install typst`, `winget install Typst.Typst`, or `cargo install typst-cli`, and ask before installing. Then `python3 -m venv .venv` and install `requirements.txt` with the venv's pip.
 
-4. **Hand over to `AGENTS.md`** in the clone and follow it from now on. Run
-   its onboarding, which records the group in `GROUP.md`; it already knows
-   the collaboration choice from step 1, so do not ask again. Finish by
-   starting Lab 0 as `AGENTS.md` describes, and tell the student in three
-   lines what was set up and where their work will be pushed.
+4. **Hand over to `AGENTS.md`** in the clone and follow it from now on. Run its onboarding, which records the group in `GROUP.md`; it already knows the collaboration choice from step 1, so do not ask again. Finish by starting Lab 0 as `AGENTS.md` describes, and tell the student in three lines what was set up and where their work will be pushed.
 
 ## Manual setup
 
-Requirements: git, Python 3.10 or newer, typst 0.12 or newer. Install typst
-with `brew install typst`, `winget install Typst.Typst`, or
-`cargo install typst-cli`.
+Requirements: git, Python 3.10 or newer, typst 0.12 or newer. Install typst with `brew install typst`, `winget install Typst.Typst`, or `cargo install typst-cli`.
 
 First in your group, or working solo:
 
@@ -100,13 +64,10 @@ Create `GROUP.md` at the root. Git ignores it.
 Me: Ada Lovelace
 Repository: git@github.com:ada/comp-photo-labs.git
 
-| Name | UF email |
-| --- | --- |
-| Ada Lovelace | ada@ufl.edu |
-| Alan Turing | turing@ufl.edu |
+| Name         | UF email       |
+| ------------ | -------------- |
+| Ada Lovelace | ada@ufl.edu    |
+| Alan Turing  | turing@ufl.edu |
 ```
 
-Each lab: `git fetch upstream`, `git switch -c Lab1 upstream/Lab1`,
-`git push -u origin Lab1`, do the work described in `README.md`, build
-`GroupXX.pdf` following `docs/SUBMISSION.md`, and upload it to Canvas.
-Pull before you start each day and push when you stop.
+Each lab: `git fetch upstream`, `git switch -c Lab1 upstream/Lab1`, `git push -u origin Lab1`, do the work described in `README.md`, build `GroupXX.pdf` following `docs/SUBMISSION.md`, and upload it to Canvas. Pull before you start each day and push when you stop.
