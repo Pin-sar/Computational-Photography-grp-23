@@ -9,8 +9,7 @@ this file before touching git.
 Files: `README.md` is the current lab. `report.typ` is the report; its
 headings are the required sections and its red `#todo[...]` marks are the
 placeholders. `docs/REPORT.md` explains the report and the template.
-The `welcome` branch's `README.md` is student setup; read it with
-`git show upstream/welcome:README.md`. `docs/SUBMISSION.md` builds the PDF.
+`docs/SUBMISSION.md` builds the PDF.
 `GROUP.md`, untracked, says whose clone this is.
 
 ## Repository model
@@ -28,6 +27,32 @@ The `welcome` branch's `README.md` is student setup; read it with
 - Forking is prohibited. A fork of a public repository is public.
 - The group roster is the `authors` list in `report.typ`, committed and
   shared. `GROUP.md` is derived from it.
+
+## Setup
+
+Triggered by "set me up", or by onboarding finding no usable `origin`.
+
+1. Check `python3 --version`, 3.10 or newer, and `typst --version`, 0.12 or
+   newer. If typst is missing, offer to install it: `brew install typst`,
+   `winget install Typst.Typst`, or `cargo install typst-cli`. Ask before
+   installing anything.
+2. Remotes, from `git remote -v`:
+   - If `origin` points at `uf-focus-lab/`, `git remote rename origin
+     upstream`.
+   - If `upstream` is missing, `git remote add upstream
+     https://github.com/uf-focus-lab/Computational-Photography.git`.
+   - If the student gave a group repository URL, `git remote add origin
+     <url>` and run "Before any push".
+   - Otherwise create their private repository. With `gh`:
+     `gh repo create comp-photo-labs --private --source=. --remote=origin --push`.
+     Without it, ask them to create an empty private repository on
+     github.com and paste the URL, then `git remote add origin <url>` and
+     `git push -u origin <current branch>`. Tell them to add teammates
+     under the repository's Settings, Collaborators.
+3. Environment: `python3 -m venv .venv`, then
+   `.venv/bin/pip install -r requirements.txt`, or `.venv\Scripts\pip` on
+   Windows.
+4. Continue with onboarding.
 
 ## Start of every session
 
@@ -68,8 +93,7 @@ onboarding before anything else, saying in one line why.
    `none yet`. The table mirrors `authors` in order. `GROUP.md` is ignored
    by git and never committed.
 5. Set up remotes according to step 3, see Collaboration. Run "Before any
-   push" first. Offer to create `.venv` if it is missing, as in the
-   `welcome` README.
+   push" first. If `.venv` is missing, run Setup step 3.
 6. If the student's own bullet is missing because the roster changed,
    pull, add only their bullet, and commit.
 7. Confirm in two lines: group, member count, where pushes go, and that
@@ -109,8 +133,8 @@ member's `origin` points at it. `upstream` stays the course repository.
 - **Host.** The student's `origin` becomes the group repository. They add
   teammates as collaborators on GitHub and share the clone URL. Set
   `Repository:` in `GROUP.md`.
-- **Join from a fresh clone.** The path in the `welcome` README: clone the group
-  repository, add `upstream`, onboard.
+- **Join from a fresh clone.** Clone the group repository, add `upstream`,
+  onboard.
 - **Join with solo work.** Run "Before any push" on the group URL. Then
   `git remote rename origin personal`, `git remote add origin <url>`,
   `git fetch origin`. On the lab branch: push if `origin/<branch>` does not
@@ -124,8 +148,7 @@ member's `origin` points at it. `upstream` stays the course repository.
 
 Check with `git remote -v`. If any item fails, stop and explain.
 
-- `origin` exists and is not under `uf-focus-lab/`. Otherwise walk the
-  student through the `welcome` README.
+- `origin` exists and is not under `uf-focus-lab/`. Otherwise run Setup.
 - `origin` is private:
   `gh repo view "$(git remote get-url origin)" --json visibility --jq .visibility`
   prints `PRIVATE`. Without `gh`, ask the student to confirm on the
