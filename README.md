@@ -13,10 +13,11 @@ work lives in a private repository of your group, never in a fork.
 
 ## Agentic setup
 
-This section is written for an AI agent. Students: paste the starter prompt
-from the Canvas announcement into your agent; it fetches this page and
-follows the steps below. Skip to Manual setup if you would rather do it
-yourself.
+> [!CAUTION]
+> The rest of this section is written for an agentic AI, not for you.
+> Paste the starter prompt from the Canvas announcement into your agent and
+> it will fetch this page and follow these steps. Prefer to do it yourself?
+> Skip to Manual setup.
 
 Agent: work through these steps in order. Ask only what a step tells you to
 ask, and never fork the course repository or make anything public.
