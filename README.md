@@ -11,9 +11,9 @@ Use of this repo is elective. Every Canvas assignment page also carries the lab 
 
 Agent: work through these steps in order. Ask only what a step tells you to ask, and never fork the course repository or make anything public.
 
-1. **Ask how the student wants to collaborate.** One message, three options: solo; first in my group, I will host the group repository; or joining my group's repository, in which case ask for its URL. Read the choice back and get an explicit yes before running any command.
+1. **Ask two things in one message.** First, how the student wants to collaborate, three options: solo; first in my group, I will host the group repository; or joining my group's repository, in which case ask for its URL. Second, which folder to clone into. If they have no preference, suggest `~/Projects/comp-photo` on macOS and Linux or `%USERPROFILE%\Projects\comp-photo` on Windows, and create it. Read both answers back and get an explicit yes before running any command.
 
-2. **Clone.**
+2. **Clone into the chosen folder.**
    - Solo or hosting: `git clone https://github.com/uf-focus-lab/Computational-Photography.git`, enter it, `git remote rename origin upstream`. Then create their private repository. With `gh`: `gh repo create comp-photo-labs --private --source=. --remote=origin --push`. Without it, ask them to create an empty private repository on github.com and paste its URL, then `git remote add origin <url>` and `git push -u origin welcome`. If hosting, tell them to add each teammate under the repository's Settings, Collaborators, and to send teammates the URL.
    - Joining: `git clone <url>`, enter it, then `git remote add upstream https://github.com/uf-focus-lab/Computational-Photography.git`.
    - Confirm with `git remote -v` that `origin` is private and `upstream` is the course repository. Never push to `upstream`.
