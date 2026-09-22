@@ -1,10 +1,15 @@
 # Computational Photography labs
 
+This is a template repository to kick-start the in-class labs: it gives
+your group a private workspace, an AI agent that knows the course rules,
+and a report that builds itself. Using it is elective. Every Canvas
+assignment page also carries the lab handout, a Word report template and,
+where there is starter code, a MATLAB version, so a group can do any lab
+the conventional way and hand in the same PDF.
+
 Each lab is a branch, `Lab0`, `Lab1`, and so on, and its `README.md` is the
 lab. This branch holds the setup and the files shared by every lab. Your
-work lives in a private repository of your group, never in a fork. A Word
-template and MATLAB starters are on Canvas for groups not using this
-repository; the deliverable is the same either way.
+work lives in a private repository of your group, never in a fork.
 
 ## Agentic setup
 
