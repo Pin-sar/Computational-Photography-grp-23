@@ -142,7 +142,7 @@ hand.
 | `docs/template.typ` | Shared typst template |
 | `requirements.txt` | Python packages, shared by all labs |
 | `LICENSE` | MIT |
-| `.vscode/settings.json` | Nests housekeeping files under `README.md` in the VS Code explorer |
+| `.vscode/` | VS Code settings and recommended extensions: Python, Pylance, Tinymist for typst |
 
 ## AI use
 
