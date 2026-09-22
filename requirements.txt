@@ -1,0 +1,7 @@
+# Shared by every lab. CPU only, no GPU required.
+#   python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+numpy
+scipy
+opencv-python
+matplotlib
+scikit-image

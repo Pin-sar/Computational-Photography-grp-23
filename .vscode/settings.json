@@ -1,0 +1,7 @@
+{
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "README.md": ".gitignore, requirements.txt, LICENSE, AGENTS.md, CLAUDE.md, GEMINI.md"
+  }
+}
