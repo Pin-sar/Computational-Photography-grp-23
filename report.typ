@@ -59,7 +59,7 @@
   (none, "View from the light"),
 ))
 
-#todo[How you implemented the shadow camera, or "Not attempted".]
+#todo[How you implemented the shadow camera.]
 
 = AI disclosure
 

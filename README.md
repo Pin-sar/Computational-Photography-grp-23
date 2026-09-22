@@ -17,6 +17,6 @@
 
 ## Submission
 
-Submit **one PDF** named `GroupXX.pdf`, where `XX` is your two-digit group number, for example `Group07.pdf`. The **Features** section is written by a group member, not by an AI; every red underlined placeholder must be filled in.
+Submit **one PDF** named `GroupXX.pdf`, where `XX` is your two-digit group number, for example `Group07.pdf`. The **Features** section is written by a group member, not by an AI; every red underlined placeholder must be filled in, except in the extra credit section.
 
 Tell your agent `Build the PDF.` It collects your results into the report, drafts the AI disclosure for your group to confirm, points out anything missing, and produces the ready-to-submit PDF. Commit the result images, not the video.
