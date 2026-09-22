@@ -4,8 +4,6 @@
 
 Art Lab is our simplest lab. All we do is read in an image and try to create effects by making the image different. Then we see how far generative AI can take the same idea.
 
-This repository is the recommended way to do the labs: clone it, work with your AI agent, and let it build the report. If you would rather work the conventional way, the same report as a Word template and the original MATLAB script are on Canvas. The deliverable is identical either way.
-
 |                  |                                        |
 | ---------------- | -------------------------------------- |
 | Status           | Practice lab, not graded this semester |
