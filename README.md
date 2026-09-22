@@ -4,8 +4,6 @@
 
 Light reaching the camera from a scene point is either direct, bounced once off that point from the source, or global, arriving after interreflections, subsurface scattering and scattering in the medium. Sweeping a light or a shadow across a static scene and recording a video lets you separate the two: the darkest each pixel ever gets is its global component, the brightest is the floodlit image, and their difference is the direct component.
 
-This repository is the recommended way to do the labs: clone it, work with your AI agent, and let it build the report. If you would rather work the conventional way, the same report as a Word template and the original MATLAB script are on Canvas. The deliverable is identical either way.
-
 |                  |                                 |
 | ---------------- | ------------------------------- |
 | Status           | Graded, plus extra credit       |
