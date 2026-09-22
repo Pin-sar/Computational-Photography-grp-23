@@ -30,7 +30,11 @@ placeholders. `docs/REPORT.md` explains the report and the template.
 
 ## Setup
 
-Triggered by "set me up", or by onboarding finding no usable `origin`.
+Triggered by "set me up", or by onboarding finding no usable `origin`. The
+`welcome` branch's README carries the same steps for an agent that is not
+yet inside a clone. Before anything else, ask how the student wants to
+collaborate, solo, hosting the group repository, or joining one by URL, and
+get an explicit yes.
 
 1. Check `python3 --version`, 3.10 or newer, and `typst --version`, 0.12 or
    newer. If typst is missing, offer to install it: `brew install typst`,
@@ -73,7 +77,8 @@ onboarding before anything else, saying in one line why.
      under AI disclosure, each a `#todo[...]`, one blank line between
      bullets. Commit as `report: set group roster`.
 3. Ask whether the group has a shared private repository: a URL, "mine will
-   be it", or "not yet".
+   be it", or "not yet". Skip this if the answer is already known from
+   Setup or from the `welcome` README's agentic setup.
 4. Write `GROUP.md` at the repository root:
 
    ```markdown

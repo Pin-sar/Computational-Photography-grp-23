@@ -8,27 +8,47 @@ repository; the deliverable is the same either way.
 
 ## Agentic setup
 
-Clone this repository, open your AI agent in it, and paste one prompt. The
-agent reads `AGENTS.md` on its own.
+This section is written for an AI agent. Students: paste the starter prompt
+from the Canvas announcement into your agent; it fetches this page and
+follows the steps below. Skip to Manual setup if you would rather do it
+yourself.
 
-First in your group, or working solo:
+Agent: work through these steps in order. Ask only what a step tells you to
+ask, and never fork the course repository or make anything public.
 
-> Set me up for this course: make a private repository of mine the origin,
-> keep the course repository as upstream, install the environment, and
-> onboard me.
+1. **Ask how the student wants to collaborate.** One message, three
+   options: solo; first in my group, I will host the group repository; or
+   joining my group's repository, in which case ask for its URL. Read the
+   choice back and get an explicit yes before running any command.
 
-Joining a repository a teammate already created:
+2. **Clone.**
+   - Solo or hosting:
+     `git clone https://github.com/uf-focus-lab/Computational-Photography.git`,
+     enter it, `git remote rename origin upstream`. Then create their
+     private repository. With `gh`:
+     `gh repo create comp-photo-labs --private --source=. --remote=origin --push`.
+     Without it, ask them to create an empty private repository on
+     github.com and paste its URL, then `git remote add origin <url>` and
+     `git push -u origin welcome`. If hosting, tell them to add each
+     teammate under the repository's Settings, Collaborators, and to send
+     teammates the URL.
+   - Joining: `git clone <url>`, enter it, then
+     `git remote add upstream https://github.com/uf-focus-lab/Computational-Photography.git`.
+   - Confirm with `git remote -v` that `origin` is private and `upstream`
+     is the course repository. Never push to `upstream`.
 
-> Set me up for this course: my group's repository is `<url>`. Install the
-> environment and onboard me.
+3. **Environment.** `python3 --version` must be 3.10 or newer and
+   `typst --version` 0.12 or newer. If typst is missing, offer to install it
+   with `brew install typst`, `winget install Typst.Typst`, or
+   `cargo install typst-cli`, and ask before installing. Then
+   `python3 -m venv .venv` and install `requirements.txt` with the venv's
+   pip.
 
-Afterwards, whenever you need them:
-
-> Start Lab 1.
-
-> I want to collaborate with my group.
-
-> Build the PDF.
+4. **Hand over to `AGENTS.md`** in the clone and follow it from now on. Run
+   its onboarding, which records the group in `GROUP.md`; it already knows
+   the collaboration choice from step 1, so do not ask again. Finish by
+   starting Lab 0 as `AGENTS.md` describes, and tell the student in three
+   lines what was set up and where their work will be pushed.
 
 ## Manual setup
 
