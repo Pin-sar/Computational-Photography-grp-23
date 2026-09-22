@@ -18,6 +18,6 @@ Paste this file into your agent, or reference it with `@docs/SUBMISSION.md`, whe
    typst compile report.typ Group07.pdf
    ```
 
-7. **Verify.** Every required heading appears once. No `#todo` remains except `#todo[To be written by the student.]` in a manual section, each reported to the student. `authors` is no longer the shipped default and every member appears on the first page, spelled as in `GROUP.md`, with the group number when there is one. AI disclosure is the last section, one bullet per member in roster order, one blank line between bullets, confirmed by the group. Manual sections contain only the student's words. `GroupXX.pdf` is the only PDF in the tree.
+7. **Verify.** Every required heading appears once. No `#todo` remains except `#todo[To be written by the student.]` in a manual section, each reported to the student, and any placeholder in a section whose heading starts with "Extra credit", which may stay untouched. `authors` is no longer the shipped default and every member appears on the first page, spelled as in `GROUP.md`, with the group number when there is one. AI disclosure is the last section, one bullet per member in roster order, one blank line between bullets, confirmed by the group. Manual sections contain only the student's words. `GroupXX.pdf` is the only PDF in the tree.
 
 8. **Report** in a few lines: the PDF path, which sections you drafted, and anything left for the student to do by hand. Do not commit the PDF. Commit and push `report.typ` so the group has the final version.
