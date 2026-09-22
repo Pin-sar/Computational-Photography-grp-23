@@ -11,26 +11,19 @@
 
 ## Tasks
 
-### 1. Create a static scene, and generate the Floodlit, Direct and Global images of that scene
+1. Create a static scene, and generate the **Floodlit**, **Direct** and **Global** images of that scene. Put them in the report and point out features that are in the direct image vs. the global, to explain that your result is correct. Example features:
+   - Specularities in direct image
+   - Shadows in direct image are dark
+   - Interreflections in global image
 
-Put them in the report and point out features that are in the direct image vs. the global, to explain that your result is correct. Example features:
+   Use the starter script `forsep.py` if you like. It has two gaps to fill.
 
-1. Specularities in direct image
-2. Shadows in direct image are dark
-3. Interreflections in global image
+2. Give your floodlit to an AI and ask it to generate direct and global. Try to create a scene that confuses the AI.
 
-Use this script to start, if you like: `forsep.py`, or `forsep_script.m` from Canvas if you work in MATLAB. For some versions of MATLAB, if you just drag and drop the video into MATLAB, it reads in the video directly. You can use this to save time.
+3. **Extra credit:** implement the shadow cameras paper and generate a view of the scene from the point of view of the light source: [Kutulakos and Narasimhan, Shadow Cameras, ICCV 2009](http://www.cs.cmu.edu/~ILIM/publications/PDFs/KN-ICCV09.pdf).
 
-### 2. Give your floodlit to an AI and ask it to generate direct and global
+## Submission
 
-Try to create a scene that confuses the AI.
+Submit **one PDF** named `GroupXX.pdf`, where `XX` is your two-digit group number, for example `Group07.pdf`. The **Features** section is written by a group member, not by an AI; every red underlined placeholder must be filled in.
 
-### 3. Extra credit: implement the shadow cameras paper
-
-Generate a view of the scene from the point of view of the light source: http://www.cs.cmu.edu/~ILIM/publications/PDFs/KN-ICCV09.pdf
-
-## Deliverables
-
-Submit one PDF, named `GroupXX.pdf` with your two-digit group number, for example `Group01.pdf`, generated from `report.typ` or from the Word template on Canvas. Every red underlined placeholder must be filled in. Both templates have the same sections and are graded the same way. The Features section is manual: written by a group member, not by an AI. If you skip the extra credit, write "Not attempted" in its section.
-
-Repository users commit `forsep.py` and the result images at the repository root. Do not commit the video; keep each image under 5 MB.
+Tell your agent `Build the PDF.` It collects your results into the report, drafts the AI disclosure for your group to confirm, points out anything missing, and produces the ready-to-submit PDF. Commit the result images, not the video.
