@@ -11,12 +11,12 @@ import numpy as np
 im = cv2.imread("mountains.png")
 
 # Q1: What is the size of the image? Use the attribute "shape".
-print("size:", ...)
+print("size:", im.shape)
 
 # Q2: Pull out the blue, green and red channels. Each is an H x W array.
 blue = im[:, :, 0]
-green = ...
-red = ...
+green = im[:, :, 1]
+red = im[:, :, 2]
 
 # Create a gray version of the image. "astype(float)" turns the data into
 # floating point numbers so the sum does not overflow uint8.
@@ -38,7 +38,9 @@ for i in range(3):
 
     if i == 0:
         # blue quantization
-        pass
+        tmp[tmp < level1] = 50
+        tmp[(tmp >= level1) & (tmp < level2)] = 100
+        tmp[(tmp >= level2) & (tmp < level3)] = 150
     elif i == 1:
         # green quantization
         tmp[tmp < level1] = 50
@@ -46,7 +48,9 @@ for i in range(3):
         tmp[(tmp >= level2) & (tmp < level3)] = 150
     elif i == 2:
         # red quantization
-        pass
+        tmp[tmp < level1] = 50
+        tmp[(tmp >= level1) & (tmp < level2)] = 100
+        tmp[(tmp >= level2) & (tmp < level3)] = 150
 
     quant[:, :, i] = tmp
 
