@@ -3,7 +3,7 @@
 #show: submission.with(
   lab: 0,
   title: "Art Lab",
-  group: none,
+  group: 23,
   authors: (
     (name: "Member Name", email: "gatorlink@ufl.edu"),
   ),
