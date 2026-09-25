@@ -3,7 +3,7 @@
 #show: submission.with(
   lab: 4,
   title: "Direct/Global Separation",
-  group: none,
+  group: 23,
   authors: (
     (name: "Member Name", email: "gatorlink@ufl.edu"),
   ),
